@@ -1,0 +1,26 @@
+<h1>Calculator App</h1>
+
+<body>
+<form method="post" action="{{ url_for('cal') }}">
+    <table>
+        <tr>
+            <td>
+                <input type="text" name="A" placeholder="1st Digit">
+            </td>
+            <td>
+                <input type="text" name="B" placeholder="2nd Digit">
+            </td>
+
+            <td>{% if value %}
+                Result = {{ value }}
+            {% endif %}</td>
+        </tr>
+        <tr>
+            <td><input type="submit" name="add" value="Add" class="ui-button"></td>
+            <td><input type="submit" name="sub" value="Sub" class="ui-button"></td>
+            <td><input type="submit" name="mul" value="Mul" class="ui-button"></td>
+            <td><input type="submit" name="div" value="Div" class="ui-button"></td>
+        </tr>
+    </table>
+</form>
+</body>

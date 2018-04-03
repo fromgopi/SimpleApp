@@ -4,5 +4,5 @@ services:
   app:
     image: calc-app:latest
     ports:
-      - "8000:5000"
+      - "5000:5000"
 

@@ -15,7 +15,6 @@ def mul_numbers(a, b):
 
 
 def div_numbers(a, b):
-    print('Inside Mul func')
     c = a / b
     return c
 

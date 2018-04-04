@@ -1,7 +1,7 @@
 <h1>Calculator App</h1>
 
 <body>
-<form method="post" action="{{ url_for('cal') }}">
+<form name="calc_form" method="post" action="{{ url_for('cal') }}" onSubmit="return validateForm();">
     <table>
         <tr>
             <td>
@@ -24,3 +24,19 @@
     </table>
 </form>
 </body>
+
+
+<script>
+
+    function validateForm() {
+        var a = document.calc_form.A.value;
+        var b = document.calc_form.B.value;
+
+
+        if(!a || !b){
+            alert("Please enter a and b");
+            return false;
+        }
+    }
+
+</script>

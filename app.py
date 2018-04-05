@@ -2,9 +2,29 @@ from flask import Flask, request, abort, render_template, render_template_string
 import logging
 app = Flask(__name__)
 
+HTML = """
+<!DOCTYPE html>
+<html lang="en" class="full-height">
+    <head>
+        <title>Home | TravisCI</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Social media analytic tool">
+        <meta name="author" content="Michal Dyzma">
+    </head>
+    <body>
+        <h1>Home Page</h1>
+    </body>
+</html>
+"""
 
 @app.route('/')
 def hello_world():
+    return HTML
+
+@app.route('/calc')
+def get_calc():
     return render_template('calc/calculator.html')
 
 
